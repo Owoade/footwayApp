@@ -98,7 +98,8 @@ function logginSystem() {
         });
 
         if (match[0].password === this.password & match.length !== 0) {
-            this.activeUser = match[0];
+            revealCaptcha(function(){
+             this.activeUser = match[0];
             active = true;
             localStorage.setItem('user-active', 'true');
             popup.classList.remove('pop-up-show');
@@ -111,6 +112,10 @@ function logginSystem() {
             firstname.textContent = match[0].firstname;
             reset();
             userActive();
+            
+            })
+            
+           
 
         } else {
             alert("Incorrect input. Please Try again");
