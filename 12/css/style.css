@@ -5,6 +5,15 @@ body {
   font-family: manrope;
   overflow-x: hidden;
 }
+@media print {
+ 
+            html,
+            body {
+ 
+                /* Hide the whole page */
+                display: none;
+            }
+        }
 
 * {
   -webkit-box-sizing: border-box;
